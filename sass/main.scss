@@ -1,0 +1,204 @@
+$color-primary: #e04f4f;
+$color-white: #fff;
+$color-grey: #777;
+$color-grey-light: #bbb;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  color: $color-grey;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 0 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+// Header
+
+.header {
+  font-size: 1.4rem;
+  padding: 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 1.2rem;
+    padding: 2rem 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: $color-grey-light;
+  }
+
+  &__title {
+    @media only screen and (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
+  &__actions {
+    & a {
+      &:last-child {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
+
+// Components
+
+.btn,
+.btn:link,
+.btn:visited {
+  cursor: pointer;
+  color: $color-primary;
+  background-color: $color-white;
+  border: 2px solid $color-primary;
+  border-radius: 4px;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+
+  @media only screen and (max-width: 768px) {
+    padding: 0.5rem 1.5rem;
+  }
+}
+.btn:hover,
+.btn:active {
+  color: $color-white;
+  background-color: $color-primary;
+}
+
+// Homepage
+
+.products {
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(max-content, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+    gap: 3rem;
+    padding: 3rem 2rem;
+
+    @media only screen and (max-width: 1220px) {
+      grid-template-columns: repeat(4, minmax(max-content, 1fr));
+    }
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: repeat(3, minmax(max-content, 1fr));
+    }
+    @media only screen and (max-width: 768px) {
+      grid-template-columns: repeat(2, minmax(max-content, 1fr));
+    }
+    @media only screen and (max-width: 540px) {
+      grid-template-columns: repeat(1, minmax(max-content, 1fr));
+    }
+  }
+}
+
+.product {
+  border: 1px solid $color-grey;
+  border-radius: 4px;
+  padding: 3rem;
+
+  &__name {
+    font-weight: 600;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & span {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+// Addproduct page
+
+.form {
+  min-width: 385px;
+
+  &__wrapper {
+    margin: 0 auto;
+    padding: 4rem 0;
+    width: max-content;
+  }
+  &__group {
+    margin: 1rem 0;
+  }
+  & label {
+    display: inline-block;
+    font-size: 1.6rem;
+    width: 25%;
+  }
+  &__input {
+    background-color: #eee;
+    border-radius: 6px;
+    border-color: #ddd;
+    border-width: 1px;
+    font-size: 1.6rem;
+    padding: 0.5rem 1rem;
+    width: 70%;
+
+    @media only screen and (max-width: 768px) {
+      width: 60%;
+    }
+  }
+  &__warning {
+    color: $color-primary;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    max-width: 385px;
+  }
+  & input[type="submit"] {
+    display: none;
+  }
+}
+
+.custom-attr {
+  display: none;
+  p {
+    color: #404040;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 1rem 0;
+    max-width: 350px;
+  }
+}
+
+.show-desc {
+  display: block;
+}
+
+// Footer
+
+.footer {
+  font-size: 1.2rem;
+  padding: 2rem;
+  border-top: 1px solid $color-grey-light;
+  text-align: center;
+}
