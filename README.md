@@ -24,9 +24,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/rsous/juniortest">
-    <img src="dice-6.png" alt="Logo" width="80" height="80">
-  </a>
 
   <h3 align="center">Junior Developer test</h3>
 
@@ -50,8 +47,8 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <a href="#description-and-instructions">Description and instructions</a>
       <ul>
+        <li><a href="#description-and-instructions">Description and instructions</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -84,7 +81,7 @@ The expected outcome of the test is a web-app (accessible by an URL) containing 
 1. Product list page
 2. Adding a product page
 
-# General coding requirements
+## General coding requirements
 
 These are the listed mandatory technical requirements:
 
@@ -99,7 +96,7 @@ These are the listed mandatory technical requirements:
 
 5. MySQL: ^5.6 obligatory
 
-# 1. Product List
+### 1. Product List
 
 MUST HAVE for the list items:
 
@@ -118,9 +115,9 @@ MUST HAVE for the list items:
 - There should be no pagination for the listing, all items should be on the same page
 - Do not show any notification messages or alert windows loading the list or after submitting ADD new product dialogue
 
-# 2. Adding a product page
+### 2. Adding a product page
 
-### The page should display a form with id: #product_form, with the following fields:
+The page should display a form with id: #product_form, with the following fields:
 
 - SKU (id: #sku)
 - Name (id: #name)
